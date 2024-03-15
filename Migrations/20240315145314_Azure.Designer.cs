@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using pursify.Data;
 
@@ -10,9 +11,11 @@ using pursify.Data;
 namespace pursify.Migrations
 {
     [DbContext(typeof(pursifyContext))]
-    partial class pursifyContextModelSnapshot : ModelSnapshot
+    [Migration("20240315145314_Azure")]
+    partial class Azure
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
